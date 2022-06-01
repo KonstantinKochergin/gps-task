@@ -54,4 +54,34 @@
         android:id="@+id/updButton"
         android:text="Update coordinates" />
 
+    <TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updButton"
+        android:text="Геолокация: "
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="offline"
+        android:layout_toRightOf="@+id/status_label"
+        android:layout_alignTop="@id/status_label"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/providers_list_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Доступные провайдеры:"
+        android:layout_below="@id/status_label"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/providers_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/providers_list_label"/>
+
 </RelativeLayout>
